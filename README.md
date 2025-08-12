@@ -3,6 +3,7 @@
 SafeSpace is a powerful and supportive AI chatbot that provides empathetic mental health support and basic medical information. It can also analyze medical images (like X-rays, skin lesions, etc.) using OpenAI’s GPT-4o Vision model.
 
 > ⚠️ **Disclaimer:** This tool does **not replace medical advice**. Always consult a licensed healthcare professional for medical concerns.
+I use ollama for medgamma model. ollama run alibayram/medgemma
 
 ---
 
@@ -30,19 +31,6 @@ SafeSpace is a powerful and supportive AI chatbot that provides empathetic menta
 
 ---
 
-## 📂 Project Structure
-
-├── backend/
-│ ├── main.py # FastAPI backend
-│ ├── ai_agent.py # LangGraph logic
-│ ├── tools.py # Tool handlers (PDF search, emergency)
-│ ├── config.py # Env vars (keys, Twilio)
-│ └── data/
-│ └── The_GALE_ENCYCLOPEDIA_of_MEDICINE_SECOND.pdf
-│ └── faiss_index_openai/
-├── frontend.py # Streamlit chat interface
-├── requirements.txt
-└── README.md
 
 ### 🧱 Prerequisites
 
@@ -51,4 +39,5 @@ git clone https://github.com/ShubhamZoro/AI-Mental-Health-Chatbot.git
 
 > Install `uv`: pip install uv
 > uv sync
+
 
