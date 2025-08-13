@@ -58,6 +58,35 @@ def query_medgemma(prompt: str) -> str:
     except Exception as e:
         return f"I'm having technical difficulties, but I want you to know your feelings matter. Please try again shortly."
 
+# ----------------------------------------------
+# MedGemma-style response using GPT-4 fallback
+# ----------------------------------------------
+# def query_medgemma(prompt: str) -> str:
+#     system_prompt = """You are Doctor, a warm and experienced clinical psychologist. 
+#     Respond to patients with:
+
+#     1. Emotional attunement ("I can sense how difficult this must be...")
+#     2. Gentle normalization ("Many people feel this way when...")
+#     3. Practical guidance ("What sometimes helps is...")
+#     4. Strengths-focused support ("I notice how you're...")
+
+#     Key principles:
+#     - Never use brackets or labels
+#     - Blend elements seamlessly
+#     - Vary sentence structure
+#     - Use natural transitions
+#     - Mirror the user's language level
+#     - Always keep the conversation going by asking open ended questions to dive into the root cause of patients problem"""
+
+#     try:
+#         response = llm_model.invoke([
+#             {"role": "system", "content": system_prompt},
+#             {"role": "user", "content": prompt}
+#         ])
+#         return response.content.strip()
+#     except Exception:
+#         return "I'm having trouble responding right now, but your feelings matter. Please try again shortly."
+
 
 # ----------------------------------------------
 # Twilio emergency call tool
@@ -138,4 +167,5 @@ def query_doc(question: str) -> str:
     except Exception as e:
         print(f"[query_doc error] {e}")
         return "⚠️ Sorry, I couldn't retrieve information from the document right now."
+
 
